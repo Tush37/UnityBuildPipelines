@@ -12,10 +12,4 @@ public class BuildScript
         
     }
 
-    [MenuItem("Custom Utilities/Build Asset Bundle StandaloneLinux64")]
-    static void PerformAssetBundleBuild()
-    {
-        BuildPipeline.BuildAssetBundles("../AssetBundles/", BuildAssetBundleOptions.ChunkBasedCompression,
-            BuildTarget.StandaloneLinux64);
-    }
 }
