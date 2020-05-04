@@ -1,13 +1,15 @@
-﻿using UnityEditor;
+using UnityEditor;
 
 public class BuildScript 
 {
-    [MenuItem("Custom Utilities/Build StandaloneLinux64")]
+    [MenuItem("Custom Utilities/Build WebGL")]
     static void PerformBuild()
     {
-        string[] defaultScene = { "Assets/Scenes/MainScene.unity" };
-        BuildPipeline.BuildPlayer(defaultScene, "./builds/game.x86_64",
-            BuildTarget.StandaloneLinux64, BuildOptions.None);
+        string[] defaultScene = { "Assets/Scenes/MainScene.unity" }; 
+        string pathToDeploy = "builds/WebGLversion/";       
+
+        BuildPipeline.BuildPlayer(defaultScene, pathToDeploy, BuildTarget.WebGL, BuildOptions.None);
+        
     }
 
     [MenuItem("Custom Utilities/Build Asset Bundle StandaloneLinux64")]
