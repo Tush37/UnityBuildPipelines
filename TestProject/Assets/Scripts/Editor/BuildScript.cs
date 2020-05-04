@@ -22,7 +22,7 @@ public class BuildScript
     static void PerformBuildWebgl()
     {
         string[] defaultScene = { "Assets/Scenes/MainScene.unity" }; 
-        string pathToDeploy = "builds/WebGLversion/";       
+        string pathToDeploy = "builds/WebGLversionNew/";       
 
         BuildPipeline.BuildPlayer(defaultScene, pathToDeploy, BuildTarget.WebGL, BuildOptions.None);
         
